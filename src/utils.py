@@ -11,7 +11,7 @@ config.read(CONFIG_FILE)
 
 # API Configuration
 API_KEY = config.get('api', 'key', fallback='')
-API_URL = config.get('api', 'url', fallback='')
+API_URL = config.get('api', 'url', fallback='') 
 
 # Database Configuration
 DB_HOST = config.get('database', 'host', fallback='localhost')
@@ -40,4 +40,4 @@ def get_aws_session():
         region_name=AWS_REGION
     )
 if __name__=='__main__':
-    print(API_KEY)
+    print(API_URL)
