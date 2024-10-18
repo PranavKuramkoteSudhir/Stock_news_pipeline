@@ -16,3 +16,6 @@ config/config.conf
 
 # .csv optput
 saved_files/
+
+#temporary
+backup/
