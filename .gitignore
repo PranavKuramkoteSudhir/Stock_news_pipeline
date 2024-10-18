@@ -13,3 +13,6 @@ config/config.conf
 
 # macOS
 .DS_Store
+
+# .csv optput
+saved_files/

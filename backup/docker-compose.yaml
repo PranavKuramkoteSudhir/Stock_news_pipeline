@@ -43,7 +43,6 @@ services:
       - PYTHONPATH=/opt/airflow/dags
     volumes:
       - ./src:/opt/airflow/dags/src
-      - ./saved_files:/opt/airflow/saved_files
       - ./src/logs:/opt/airflow/logs
       - ./src/plugins:/opt/airflow/plugins
       - ./config:/opt/airflow/dags/config
@@ -65,7 +64,6 @@ services:
       - airflow-webserver
     volumes:
       - ./src:/opt/airflow/dags/src
-      - ./saved_files:/opt/airflow/saved_files
       - ./src/logs:/opt/airflow/logs
       - ./src/plugins:/opt/airflow/plugins
       - ./config:/opt/airflow/dags/config
@@ -88,7 +86,6 @@ services:
       - airflow-scheduler
     volumes:
       - ./src:/opt/airflow/dags/src
-      - ./saved_files:/opt/airflow/saved_files
       - ./src/logs:/opt/airflow/logs
       - ./src/plugins:/opt/airflow/plugins
       - ./config:/opt/airflow/dags/config
