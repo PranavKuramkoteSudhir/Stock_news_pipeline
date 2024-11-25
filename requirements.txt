@@ -1,0 +1,8 @@
+jupyter_client
+numpy
+pandas
+pytest
+requests
+setuptools
+-e .
+

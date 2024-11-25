@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# Airflow
+logs/
+
+# Configuration files
+config/config.conf
+
+# macOS
+.DS_Store
+
+# .csv optput
+saved_files/
+
+#temporary
+backup/
+
+#reference files
+reference/
