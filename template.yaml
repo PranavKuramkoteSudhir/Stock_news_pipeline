@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  FetcherFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./src/fetch
+      Handler: main.handler
+      Runtime: python3.9
+      Timeout: 30
+      Environment:
+        Variables:
+          API_KEY: dummy-key-for-local-testing
+      Events:
+        Schedule:
+          Type: Schedule
+          Properties:
+            Schedule: rate(5 minutes)

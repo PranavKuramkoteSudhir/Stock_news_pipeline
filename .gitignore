@@ -22,3 +22,6 @@ backup/
 
 #reference files
 reference/
+
+# AWS SAM
+.aws-sam/

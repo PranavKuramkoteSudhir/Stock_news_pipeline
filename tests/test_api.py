@@ -1,8 +1,6 @@
 import pytest
 import os
 import sys
-project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, project_root)
 from src.fetch.api import NewsAPIClient
 from src.fetch.exceptions import APIConnectionError, APIResponseError, APIRateLimitError
 

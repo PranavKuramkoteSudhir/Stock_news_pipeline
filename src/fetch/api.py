@@ -2,7 +2,7 @@ import logging
 import requests
 from typing import List, Dict, Any
 from datetime import datetime
-from .exceptions import APIConnectionError, APIResponseError, APIRateLimitError
+from exceptions import APIConnectionError, APIResponseError, APIRateLimitError
 
 logger = logging.getLogger(__name__)
 
@@ -11,7 +11,6 @@ class NewsAPIClient:
         self.api_key = api_key
         self.base_url = base_url
         self.session = requests.Session()
-        # MarketAux doesn't use Bearer token, it uses api_token parameter
         self.session.headers.update({
             'Content-Type': 'application/json'
         })

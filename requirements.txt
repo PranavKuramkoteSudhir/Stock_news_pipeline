@@ -4,5 +4,6 @@ pandas
 pytest
 requests
 setuptools
+boto3
 -e .
 
