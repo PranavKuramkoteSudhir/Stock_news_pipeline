@@ -7,5 +7,3 @@ setuptools
 boto3
 nltk
 moto
--e .
-

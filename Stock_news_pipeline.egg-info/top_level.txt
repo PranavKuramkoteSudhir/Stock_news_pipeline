@@ -1,5 +1,3 @@
 backup
-database
-fetch
 src
 tests

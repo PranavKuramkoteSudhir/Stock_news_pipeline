@@ -3,3 +3,12 @@ Name: Stock-news-pipeline
 Version: 0.0.1
 Author: Pranav Kuramkote Sudhir
 Author-email: pranav.pani@gmail.com
+Requires-Dist: jupyter_client
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pytest
+Requires-Dist: requests
+Requires-Dist: setuptools
+Requires-Dist: boto3
+Requires-Dist: nltk
+Requires-Dist: moto

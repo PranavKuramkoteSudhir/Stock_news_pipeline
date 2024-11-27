@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  SentimentFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./src/processor
+      Handler: sentiment.handler
+      Runtime: python3.9
+      Timeout: 60
+      MemorySize: 256
+      PackageType: Zip
+      Events:
+        SQSEvent:
+          Type: SQS
+          Properties:
+            Queue: !GetAtt ProcessingQueue.Arn
+            BatchSize: 10
+
+  ProcessingQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      VisibilityTimeout: 300
